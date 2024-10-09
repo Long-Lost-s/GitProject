@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const z = 30; // Khai báo biến z
+  z = 40; // Lỗi: TypeError: Assignment to constant variable.
+  if (true) {
+    const z = 50; // Biến này chỉ có hiệu lực trong khối if
+    console.log(z); // Kết quả: 50
+  }
+  console.log(z); // Kết quả: 30
+</script>
+<script>
+  let y = 10; // Khai báo biến y
+  y =50
+  if (true) {
+    let y = 20; // Biến này chỉ có hiệu lực trong khối if
+    console.log(y); // Kết quả: 20
+  }
+  console.log(y); // Kết quả: 10
+</script>
+<script>
+  var x = 10; // Khai báo biến x
+  if (true) {
+    var x = 20; // Cùng phạm vi, biến này thay thế biến bên ngoài
+  }
+  console.log(x); // Kết quả: 20
+</script>
+</body>
+</html>
