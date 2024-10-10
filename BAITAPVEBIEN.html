@@ -6,22 +6,22 @@
 </head>
 <body>
 <form>
-    <input id="physics" type="text"/>
-    <input id="chemistry" type="text"/>
-    <input id="biology" type="text"/>
+    <input id="physics" type="number"/>
+    <input id="chemistry" type="number"/>
+    <input id="biology" type="number"/>
     <button id="calculate" onclick="calculate()">calculate</button>
-    <p id="average">average</p>
-    <p id="total">total</p>
+    <p id="tongdiem"></p>
+    <p id="diemtrungbinh"></p>
 </form>
 <script>
     function calculate() {
-        let a = document.getElementById("physics");
-        let b = document.getElementById("chemistry");
-        let c = document.getElementById("biology");
-        let total = a + b + c;
-        let average = total/3
-        document.write('total'+total)
-        document.write('average'+average)
+        let a = parseFloat(document.getElementById("physics").value);
+        let b = parseFloat(document.getElementById("chemistry").value);
+        let c = parseFloat(document.getElementById("biology").value);
+        let tongdiem = a + b + c;
+        let diemtrungbinh = total/3;
+        document.getElementById('tongdiem').innerText = "Tổng điểm: " + tongdiem;
+        document.getElementById('diemtrungbinh').innerText = "Điểm trung bình: " + diemtrungbinh;
     }
 </script>
 </body>

@@ -6,29 +6,75 @@
 </head>
 <body>
 <script>
-  const z = 30; // Khai báo biến z
-  z = 40; // Lỗi: TypeError: Assignment to constant variable.
-  if (true) {
-    const z = 50; // Biến này chỉ có hiệu lực trong khối if
-    console.log(z); // Kết quả: 50
-  }
-  console.log(z); // Kết quả: 30
+    switch (new Date().getDay()){
+        case 0:
+            day = 'Chủ Nhật';
+            break;
+        case 1:
+            day = 'Thứ 2';
+            break;
+        case 2:
+            day = 'Thứ 3';
+            break;
+        case 3:
+            day = 'Thứ 4';
+            break;
+        case 4:
+            day = 'Thứ 5';
+            break;
+        case 5:
+            day = 'Thứ 6';
+            break;
+        case 6:
+            day = 'Thứ 7';
+            break;
+    }
+    document.write(day)
+    switch (new Date().getDay()) {
+        case 4:
+            text = 'Hôm nay là thứ 5';
+            break;
+        case 0:
+            text = 'Hôm nay là chủ nhật';
+            break;
+        default:
+            text = 'Nhớ cuối tuần';
+    }
+    document.write(text)
+    switch (new Date().getDay()){
+        case 1:
+        case 2:
+        case 3:
+        default:
+            text = 'miss weekend';
+            break;
+        case 4:
+        case 5:
+            text = 'hehe weekend is coming';
+            break;
+        case 0:
+        case 6:
+            text = 'weekend is here';
+            break;
+    }
+    document.write(text)
 </script>
 <script>
-  let y = 10; // Khai báo biến y
-  y =50
-  if (true) {
-    let y = 20; // Biến này chỉ có hiệu lực trong khối if
-    console.log(y); // Kết quả: 20
-  }
-  console.log(y); // Kết quả: 10
+    let curDate = new Date();
+    let time = curDate.getHours();
+    if (time<8){
+        say = 'goodmoring';
+    }
+    else if ( time<15){
+        say = 'heheafternoon';
+    }
+    else {
+        say = 'halaevening';
+    }
+    alert(say);
 </script>
-<script>
-  var x = 10; // Khai báo biến x
-  if (true) {
-    var x = 20; // Cùng phạm vi, biến này thay thế biến bên ngoài
-  }
-  console.log(x); // Kết quả: 20
-</script>
+<button onclick="this.innerHTML=Date()">What time is this?</button><br>
+
+
 </body>
 </html>
