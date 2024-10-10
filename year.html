@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap nam" type="text" placeholder="nam nhap">
+<button type="button" id="button">ketqua</button>
+<script>
+    document.getElementById('button').onclick = function () {
+        let year = parseInt(prompt("nhap nam"));
+        if (year%4 == 0){
+            if (year%100 == 0){
+                if (year%400 == 0) {
+                    alert(year + "day la nam nhuan");
+                }
+                else {
+                    alert(year + "day khong phai nam nhuan");
+                }
+            }
+            else {
+                alert(year + "day khong phai nam nhuan");
+            }
+        }
+        else {
+            alert(year + "day khong phai nam nhuan");
+        }
+    }
+
+</script>
+</body>
+</html>

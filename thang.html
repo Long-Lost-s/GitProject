@@ -5,20 +5,35 @@
     <title>Title</title>
 </head>
 <body>
+<input id="thang" type="text" placeholder="nhap thang">
+<button onclick="cal()">tinh</button>
+<p id="kq"></p>
 <script>
-    let a = new Date();
-    let time = a.getDate();
-    if (time=31){
-        say = "thang 1, thang 3, thang 5, thang 7, thang 8, thang 10, thang 12";
+    function cal() {
+        let month = parseInt(document.getElementById("thang").value);
+        let s ="";
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                s = "31 ngay";
+                break;
+            case 2:
+                s = "28 hoac 29 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                s= '30 ngay';
+                break;
+        }
+        document.getElementById("kq").innerHTML=s;
     }
-    else if (time=30){
-        say = "thang 4, thang 6, thang 9, thang 11";
-    }
-    else {
-        say = "thang 2";
-    }
-    document.write(say);
-
 </script>
 </body>
 </html>
