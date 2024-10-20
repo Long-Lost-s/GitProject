@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let c = parseFloat(prompt("nhap nhiet do"));
+    let f = 0;
+    if (!isNaN(c)){
+        f=c*9/5 +32;
+        document.write("Nhiet do c" + c + "chuyen thanh" + f + "nhiet do f");
+    } else{
+        document.write("vui long nhap lai");
+    }
+</script>
+<script>
+    let m = parseFloat(prompt("nhap so m"));
+    let ft = 0;
+    if (!isNaN(m)){
+        ft = m * 3.2808;
+        document.write("Do dai m: "+m + " chuyen thanh "+ft+" do dai ft");
+    } else {
+        document.write("vui long nhap lai");
+    }
+</script>
+<script>
+    let canha = parseFloat(prompt("nhap so"));
+    let dientich = 0;
+    if (!isNaN(canha)){
+        dientich = canha*canha;
+        document.write("dien tich hinh vuong: "+dientich);
+    } else {
+        document.write("nhap lai di ngoo zay");
+    }
+</script>
+<script>
+    let canhdai = parseFloat(prompt("nhap so"));
+    let canhrong = parseFloat(prompt("nhap so"));
+    let dientich = 0;
+    if (!isNaN(canhrong) && !isNaN(canhdai)){
+        dientich = canhrong*canhdai;
+        document.write("dien tich hinh chu nhat: "+dientich);
+    } else {
+        document.write("nhap lai dum cai");
+    }
+</script>
+<script>
+    let canhdai = parseFloat(prompt("canh dai"));
+    let canhrong = parseFloat(prompt("canh rong"));
+    let dientich =0;
+    if (!isNaN(canhrong) && !isNaN(canhdai)){
+        dientich = canhrong*canhdai/2;
+        document.write("dien tich tam giac: "+dientich);
+    } else {
+        alert("nhap lai di please");
+    }
+</script>
+<script>
+    let a = parseFloat(prompt("nhap zo"));
+    let b = parseFloat(prompt("nhap nua ne"));
+    let ketqua = "";
+    if (a===0 && b===0){
+ketqua = "phuong trinh vo so nghiem";
+    }else if (a===0 && b!==0){
+        ketqua = "phuong trinh vo nghiem";
+    } else {
+        let x = -b/a;
+        ketqua = "nghiem phuong trinh la: "+ x;
+    }
+    document.write(ketqua);
+</script>
+<script>
+let a = parseFloat(prompt("nhap tuoi"));
+switch (true) {
+    case (a<=120 && a>=0):
+        document.write("Hop le");
+        break;
+    case (a>120):
+        document.write("khong hop le");
+        break;
+    case (a<0):
+        document.write("nguoi nao tuoi am");
+}
+</script>
+<script>
+    let a = parseFloat(prompt("nhap canh a"));
+    let b = parseFloat(prompt("nhap canh b"));
+    let c = parseFloat(prompt("nhap canh c"));
+    let ketqua ="";
+    if (a>0 && b>0 && c>0){
+        if (a+b>c && a+c>b && b+c>a){
+            ketqua ="day la hinh tam giac";
+        }else {
+            ketqua ="day khong phai hinh tam giac";
+        }
+    }else {
+        ketqua ="day la hinh gi???";
+    }
+    document.write(ketqua);
+</script>
+<script>
+    const h1=0.05;
+    const h2=0.1;
+    const h3=0.15;
+    const h4=0.2;
+let a = parseFloat(prompt("nhap so luong 1 thang"));
+let ketqua ="";
+if (a<=5000000){
+    ketqua = a*h1;
+}else if (a>5000000 && a<=10000000){
+    ketqua = a*h2;
+}else if (a>10000000 && a<=18000000){
+    ketqua = a*h3;
+}else {
+    ketqua = a*h4;
+}
+document.write(ketqua);
+</script>
+<script>
+        // Nhập số tiền ban đầu, số tháng cho vay và lãi suất hàng tháng
+        let P = parseFloat(prompt("Nhập số tiền ban đầu:"));
+        let t = parseInt(prompt("Nhập số tháng cho vay:"));
+        let r = parseFloat(prompt("Nhập lãi suất hàng tháng (ví dụ 0.05 tương ứng 5%):"));
+
+        let A = P;  // Bắt đầu bằng số tiền ban đầu
+        let ketqua = "";
+
+        // Tính lãi mẹ đẻ lãi con sau t tháng
+        if (P > 0 && t > 0 && r > 0) {
+        A = P * Math.pow((1 + r), t);  // Công thức lãi kép
+        ketqua = "Số tiền cuối cùng sau " + t + " tháng là: " + A.toFixed(2);
+    } else {
+        ketqua = "Dữ liệu nhập không hợp lệ.";
+    }
+        document.write(ketqua);
+</script>
+
+</script>
+</body>
+</html>

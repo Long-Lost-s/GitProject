@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap so dien da su dung zo zo</label>
+<input id="so dien" type="text">
+<button onclick="button()">An vao day</button>
+<div id="ketqua"></div>
+<script>
+    const v1 = 1806;
+    const v2 = 1866;
+    const v3 = 2167;
+    const v4 = 2729;
+    const v5 = 3050;
+    const v6 = 3151;
+function button() {
+    let a = parseFloat(document.getElementById("so dien").value);
+    // let ketqua ="";
+    if (a<=50){
+        ketqua = a * v1;
+    } else if (a<=100){
+        ketqua = (a - 50) * v2 + 50 * v1;
+    } else if (a<=200){
+        ketqua = (a-100) * v3 + 50 * v2 + 50 * v1;
+    }else if (a<=300){
+        ketqua = (a-200) * v4 + 100 * v3 + 50 * v2 + 50 * v1;
+    }else if (a<=400){
+        ketqua = (a-300) * v5 + 100 * v4 + 100 * v3 + 50 * v2 + 50 * v1;
+    }else {
+        ketqua = (a-400)* v6 + 100 * v5 + 100 * v4 + 100 * v3 + 50 * v2 + 50 * v1;
+    }
+    document.getElementById("ketqua").innerHTML = "tong tien dien la: " + ketqua;
+}
+</script>
+</body>
+</html>

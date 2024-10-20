@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap so");
+    let b = prompt("nhap so");
+    let ketqua ="";
+    if (a % b === 0){
+        ketqua  ="dung";
+    }
+    else {
+        ketqua ="sai";
+    }
+    document.write(ketqua);
+</script>
+<script>
+    let c = prompt("nhap tuoi");
+    let ketqua = "";
+    if (c < 15) {
+        ketqua = "khong du tuoi hoc lop 10";
+    }
+    else {
+        ketqua = "";
+    }
+    document.write(ketqua);
+</script>
+<script>
+    let d = parseFloat(prompt("nhap so"));
+    let ketqua="";
+    if (d>0){
+        ketqua = "d la so duong";
+    } else if (d<0){
+        ketqua = "d la so am";
+    }else {
+        ketqua = "d la 0";
+    }
+    document.write(ketqua);
+</script>
+<script>
+    let a = parseFloat(prompt("nhap so"));
+    let b = parseFloat(prompt("nhap so"));
+    let c = parseFloat(prompt("nhap so"));
+    let ketqua="";
+    if (a > b){
+        if (a>c){
+            ketqua ="a lon nhat";
+        } else {
+            ketqua ="c lon nhat";
+        }
+    }else if (b > a){
+        if (b > c){
+            ketqua ="b lon nhat";
+        }else{
+            ketqua ="c lon nhat";
+        }
+    }
+    document.write(ketqua);
+</script>
+<script>
+    let a = parseFloat(prompt("diem bai kiem tra 15p"));
+    let b = parseFloat(prompt("diem bai kiem tra giua ki"));
+    let c = parseFloat(prompt("diem bai kiem tra cuoi ki"));
+    let dtb = a*0.1 +b*0.3 +c*0.6;
+    let ketqua="";
+    if (dtb>=4 && dtb < 6){
+        ketqua = "yeu";
+    } else if (dtb>=6 && dtb<8){
+        ketqua = "kha";
+    } else if (dtb>=8 && dtb <=10) {
+        ketqua ="tot";
+    } else{
+        ketqua ="kem";
+    }
+    document.write(ketqua);
+</script>
+<script>
+    const g1 = 10000;
+    const g2 = 15000;
+    const g3 = 20000;
+    let a = parseFloat(prompt("doanh so"));
+    let ketqua ="";
+    if (a<g1){
+        ketqua = a;
+    }else if (g1<=a<g2){
+        ketqua = a*0.1;
+    }else if (g2<=a<g3){
+        ketqua = a*0.15;
+    }else if (a>=g3){
+        ketqua = a*0.2;
+    }
+    document.write(ketqua);
+</script>
+</body>
+</html>

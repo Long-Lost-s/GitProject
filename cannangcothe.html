@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tinh xem ban beo hay gay?</h1>
+<label for="cannang">Nhap can nang vao day: (theo can)</label>
+<input type="text"  id="cannang">
+<br>
+<label for="chieucao">Cao bao nhieu: (theo met)</label>
+<input type="text" id="chieucao">
+<button onclick="kiemtra()">beo hay gay nao</button>
+<p id="ketqua"></p>
+<script>
+  function kiemtra() {
+    let chieucao = document.getElementById("chieucao").value;
+    let cannang = document.getElementById("cannang").value;
+    let bmi = cannang / (chieucao ^ 2);
+    let ketqua ="";
+    if (bmi <18.5){
+      ketqua = "gay day may an them di";
+    } else if (bmi <25){
+      ketqua = "binh thuong do may oi";
+    } else if (bmi<30){
+      ketqua = "hoi beo, giam can di";
+    } else {
+      ketqua ="sieu beo roi, nohope";
+    }
+    document.write('chi so BMI cua ban la: ' +bmi +ketqua);
+  }
+</script>
+</body>
+</html>
